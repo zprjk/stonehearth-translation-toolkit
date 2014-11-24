@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: gainsboro;
+    width: 100%;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+
+  <script>
+  function bodyOnLoad() {
+    require('./server.js');
+
+    var gui = require('nw.gui');
+    gui.Window.get().close();
+
+    gui.Window.open('http://localhost:80/about', {
+      "title": "stranslation - DEBUG mode",
+      "width": 900,
+      "height": 610,
+      "focus": true
+    });
+  }
+  </script>
+</head>
+
+<body onload="bodyOnLoad()">
+  <img src="./public/images/loader.jpg">
+
+</body>
+
+</html>

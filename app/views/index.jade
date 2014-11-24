@@ -1,0 +1,65 @@
+doctype
+html(ng-app="stranslation")
+head
+  meta(charset="utf8")
+  base(href="/")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="stylesheet" href="css/bootstrap.min.css")
+  link(rel="stylesheet" href="css/custom.css")
+
+body(ng-controller='indexCtrl' ng-cloak)
+  
+  div.container-fluid
+    h1.text-center.text-primary {{pkg.description}}
+      span.small  v{{pkg.version}}
+
+    //- App version verification alert
+    div.alert.alert-warning.text-center(role="alert" ng-show="versionWarning") 
+      strong There's a new version available. New version: <code>{{gitAppVersion}}</code> 
+    
+    //- Game Dir
+    div.row
+      div.input-group(class= "col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2")
+        span.input-group-addon Game Directory
+        div.form-group(ng-class="{'has-success': saveSucess, 'has-feedback': saveSucess, 'has-error': emptyDir}")
+          input#inputSuccess2.form-control(type="text" ng-model="gamePath" aria-describedby="inputSuccess2Status" placeholder="example: C:\\Games\\Stonehearth")
+          span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-show="saveSucess")
+        span.input-group-btn
+          button.btn.btn-default(ng-click="SaveGamePath(gamePath)" type="button") Save
+      
+      //- Game Dir verification alert
+      div.alert.alert-danger.text-center(role="alert" ng-show="errorSaving") 
+        strong Error saving Game Directory
+
+      //- Game Dir verification alert
+      div.alert.alert-danger.text-center(role="alert" ng-show="emptyDir") 
+        strong Game Directory is empty
+
+    //- TABS
+    ul.nav.nav-pills.nav-justified
+      li(ng-click="activeTab= 'generate'" ng-class="{active: activeTab == 'generate'}")
+        a(href="/generate") Create Default CSV
+
+      li(ng-click="activeTab= 'csv'" ng-class="{active: activeTab == 'csv'}")
+        a(href="/csv") Update CSV
+
+      li(ng-click="activeTab= 'json'" ng-class="{active: activeTab == 'json'}")
+        a(href="/json") Export To JSON
+
+    //- Views
+    div.ng-view
+
+    //- Footer
+    div.footer.text-center
+     br
+     p.small {{pkg.author}} || 2014 || {{pkg.repository.url}} || <a ng-click="activeTab= 'about'" href="/about">About</a>
+  
+  //- libs
+  script(src="js/lib/angular.min.js")
+  script(src="js/lib/angular-route.min.js")
+  script(src="js/app.js")
+  script(src="js/controllers/index.js")
+  script(src="js/controllers/generate.js")
+  script(src="js/controllers/csv.js")
+  script(src="js/controllers/json.js")
+

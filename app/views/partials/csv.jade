@@ -1,0 +1,12 @@
+//- {{cfg}} scope var comes from indexCtrl
+div.alert.alert-success.text-center(role="alert") 
+	strong This will update all ".csv" files in <code>{{cfg.dist.csv.basePath}}</code> directory.
+
+button.btn.btn-success.btn-lg(ng-click="UpdateCSV()" ng-class="{disabled: disabled}" type="button") Update CSVs
+br
+br
+div.well
+	h3.text-primary 
+		strong Log
+	ol
+		li(ng-repeat="log in logs track by $index") {{log}}

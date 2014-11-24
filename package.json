@@ -1,0 +1,21 @@
+{
+  "name": "stranslation",
+  "main": "./app/index.html",
+  "keywords": [
+    "smod",
+    "manager",
+    "stonehearth",
+    "zip",
+    "json",
+    "csv",
+    "converter"
+  ],
+  "single-instance": true,
+  "window": {
+    "title": "stranslation - translation helper",
+    "toolbar": false,
+    "frame": true,
+    "width": 900,
+    "height": 610
+  }
+}

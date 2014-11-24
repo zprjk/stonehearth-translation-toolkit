@@ -1,0 +1,24 @@
+{
+  "game": {
+    "basePath": "",
+    "modsPath": "mods",
+    "smod": "stonehearth.smod",
+    "languagePath": "locales/en.json",
+    "extension": ".smod"
+  },
+  "dist": {
+    "csv": {
+      "basePath": "../_dist/csv",
+      "originalFileName": "s.original.csv"
+    },
+    "json": {
+      "basePath": "../_dist/json"
+    }
+  },
+  "cons": {
+    "phrasesId": "phrasesId",
+    "original": "original",
+    "newPhrase": "{{NEW}}",
+    "updatedPhrase": "{{UPDATED}}"
+  }
+}

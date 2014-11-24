@@ -1,0 +1,27 @@
+
+/*#console {
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	padding: 10px;
+}*/
+
+.nav-justified>li>a {
+	height: 80px;
+	font-size: x-large;
+	line-height: 2.4;
+	border: solid 0.05em;
+	margin: 1px;
+	margin-top: 10px;
+}
+
+body,
+html {
+	height: 100%;
+	background-color: gainsboro;
+}
+
+.ng-view {
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	padding: 10px;
+}

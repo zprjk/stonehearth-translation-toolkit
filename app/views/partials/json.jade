@@ -1,0 +1,12 @@
+//- {{cfg}} scope var comes from indexCtrl
+div.alert.alert-success.text-center(role="alert") 
+	strong All CSVs files in <code>{{cfg.dist.csv.basePath}}</code> directory will be export to <code>{{cfg.dist.json.basePath}}</code> directoy as JSON files
+
+button.btn.btn-success.btn-lg(ng-click="ExportsToJson()" ng-class="{disabled: disabled}" type="button") Export CSV to JSON
+br
+br
+div.well
+	h3.text-primary 
+		strong Log
+	ol
+		li(ng-repeat="log in logs track by $index") {{log}}

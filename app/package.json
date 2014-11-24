@@ -29,6 +29,7 @@
     "globule": "^0.2.0",
     "jade": "^1.7.0",
     "jszip": "git+https://github.com/Stuk/jszip.git",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "request": "^2.48.0"
   }
 }
