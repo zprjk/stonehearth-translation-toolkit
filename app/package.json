@@ -14,7 +14,11 @@
     "zip",
     "json",
     "csv",
-    "converter"
+    "converter",
+    "nodejs",
+    "npm",
+    "expressjs",
+    "angularjs"
   ],
   "author": "zepedrojk@gmail.com",
   "license": "ISC",

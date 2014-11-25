@@ -8,7 +8,11 @@
     "zip",
     "json",
     "csv",
-    "converter"
+    "converter",
+    "nodejs",
+    "npm",
+    "expressjs",
+    "angularjs"
   ],
   "single-instance": true,
   "window": {
