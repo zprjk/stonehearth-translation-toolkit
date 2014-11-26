@@ -10,8 +10,8 @@ npm install
 and then 
 ```
 node server.js
+or
+simply use stranslation.exe
 ```
-or simply use stranslation.exe
-
 #Users
 Check this thread http://discourse.stonehearth.net/t/stranslation-stonehearth-translation-toolkit/8768
