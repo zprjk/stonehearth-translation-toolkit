@@ -18,3 +18,6 @@ simply use stranslation.exe
 ```
 #Users
 Check this thread http://discourse.stonehearth.net/t/stranslation-stonehearth-translation-toolkit/8768
+
+[![img](http://i.imgur.com/yYQdhB1.jpg)](http://imgur.com/a/wWRLU)
+
